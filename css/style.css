@@ -1,0 +1,224 @@
+/***** STARTER CODE - DO NOT CHANGE *****/
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #737373;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  color:white;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav{
+  background-color: #ddd;
+  padding: 25px 10px;;    
+  text-align: left;   
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+  margin-right: 5%;
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.text{
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+footer a,
+footer a:visited{
+  color: white;
+}
+/*****  End Starter Code ****/
+
+/* Requirement 1 code here*/
+nav li a{
+  text-decoration-line:none;
+}
+/* Requirement 2 code here*/
+
+nav li a:hover{
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+a.skip{
+  background: white;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: left 1s ease-out;
+  z-index: 1;
+  /* Requirement 3 code here*/
+  /*did you mean position 500px right?*/
+  position: relative;
+  right: 500px;
+}
+
+/* Requirement 4 code here*/
+nav li a:focus{
+  border-top: 2px solid yellow;
+  text-decoration-line: none;
+  text-decoration-style: none;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  row-gap: 30px;
+}
+
+/* Requirements 6-10 here: */
+.intro{
+  /*parallax baground imagae*/
+}
+
+.about{
+  grid-column-start: 2;
+}
+.clients{
+  grid-column-start: 2;
+}
+.method{
+  grid-column-start: 2;
+}
+.contact{
+  grid-column-start: 2;
+}
+
+.img{
+  width: 100%;
+}
+
+.about-image{
+  /* grid-column-start: 1/4; */
+  max-height: 50px;
+  /* hide part of image that exceeds the div */
+}
+
+.clients-image{
+  /* grid-column-start: 1/4; */
+  max-height: 50px;
+  /* hide part of image that exceeds the div */
+}
+
+.method-image{
+  /* grid-column-start: 1/4; */
+  max-height: 50px;
+  /* hide part of image that exceeds the div */
+}
+
+.contact-image{
+  /* grid-column-start: 1/4; */
+  max-height: 50px;
+  /* hide part of image that exceeds the div */
+}
+
+/* Place the elements so that about and about-image
+are on the same row, clients, and clients-image are on
+the same row, etc. */
+
+.text{
+  text-align: center;
+  max-height: 25vh;
+  overflow:scroll
+}
+
+
+@media screen and (min-width: 700px){
+  nav{
+    padding-top: 35px;
+    /*Requirement 11*/
+    text-align:right;
+  }
+
+  nav li{
+    margin-left: 5%;
+    margin-right:0;
+  }
+
+  
+  /* Requirements 12-15 here: */
+  /* When the link using the skip class
+  (“Skip to Main Content”) is in focus it is
+  even with the left side of the screen and 20px down.**   */
+  .container{
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 300px 300px 300px 300px
+  }
+
+/* The .about, .method, .clients-image, .contact-image
+elements: Begin in the third column and span two columns
+
+
+The .clients, .contact, .about-image, and .method-image:
+Begin in the second column and span two columns. */
+
+}
+
+
+
+
+
+
+/** Code for prefers reduced motion **/
+/* Make no changes below this line.
+   *************************************** 
+   */
+@media screen and (prefers-reduced-motion: reduce){
+  /*Turn off scroll*/
+  html{
+    scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  /*Turn off transition*/
+  a.skip {
+    -webkit-transition: initial; /* sets to default setting */
+    transition: initial; /* sets to default setting */
+  }
+
+  /*Turn off parallax*/
+  .intro{
+    background-attachment: initial;
+  }
+}
