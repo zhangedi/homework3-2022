@@ -89,7 +89,7 @@ a.skip{
   z-index: 1;
   /* Requirement 3 code here*/
   /*did you mean position 500px right?*/
-  position: relative;
+  position: inherit;
   right: 500px;
 }
 
@@ -139,6 +139,41 @@ img{
   overflow: hidden;
 }
 
+.about-image{
+  grid-row-start: 1;
+}
+
+.about{
+  grid-row-start: 1;
+  z-index: 1;
+}
+
+.clients-image{
+  grid-row-start: 2;
+}
+
+.clients{
+  grid-row-start: 2;
+  z-index: 1;
+}
+
+.method-image{
+  grid-row-start: 3;
+}
+
+.method{
+  grid-row-start: 3;
+  z-index: 1;
+}
+
+.contact-image{
+  grid-row-start: 4;
+}
+
+.contact{
+  grid-row-start :4;
+  z-index: 1;
+}
 .text{
   text-align: center;
   max-height: 25vh;
@@ -181,12 +216,6 @@ img{
 .method-image{
   grid-column:2/span 2;
 }
-/* The .about, .method, .clients-image, .contact-image
-elements: Begin in the third column and span two columns
-
-
-The .clients, .contact, .about-image, and .method-image:
-Begin in the second column and span two columns. */
 
 }
 
