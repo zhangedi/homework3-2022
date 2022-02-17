@@ -203,9 +203,10 @@ img{
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 300px 300px 300px 300px
   }
+
 .about,
 .method,
-.client-image,
+.clients-image,
 .contact-image{
   grid-column: 3 / span 2;
 }
